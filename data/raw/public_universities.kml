@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="public_universities" id="public_universities">
+	<SimpleField name="map_id" type="int"></SimpleField>
+	<SimpleField name="x" type="int"></SimpleField>
+	<SimpleField name="y" type="int"></SimpleField>
+	<SimpleField name="university" type="string"></SimpleField>
+	<SimpleField name="website" type="string"></SimpleField>
+	<SimpleField name="email" type="string"></SimpleField>
+	<SimpleField name="tel" type="string"></SimpleField>
+	<SimpleField name="village" type="string"></SimpleField>
+	<SimpleField name="commune" type="string"></SimpleField>
+	<SimpleField name="district" type="string"></SimpleField>
+	<SimpleField name="province" type="string"></SimpleField>
+	<SimpleField name="rector" type="string"></SimpleField>
+	<SimpleField name="establish_" type="int"></SimpleField>
+	<SimpleField name="faculty_kh" type="string"></SimpleField>
+	<SimpleField name="last_updat" type="string"></SimpleField>
+	<SimpleField name="reference" type="string"></SimpleField>
+	<SimpleField name="language" type="string"></SimpleField>
+</Schema>
+<Folder><name>public_universities</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">1</SimpleData>
+		<SimpleData name="x">488896</SimpleData>
+		<SimpleData name="y">1279035</SimpleData>
+		<SimpleData name="university">Institute of Technology of Cambodia</SimpleData>
+		<SimpleData name="website">http://www.itc.edu.kh</SimpleData>
+		<SimpleData name="email">info@itc.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23880370</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E Dr. Om Romny</SimpleData>
+		<SimpleData name="establish_">1964</SimpleData>
+		<SimpleData name="faculty_kh">Department of Chemical Engineering and Food Technology;Department of Civil Engineering;Department of Electrical and Energy Engineering,Department of Geo-Resources and Geotechnical Engineering;Department of Rural Engineering</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.898155106177,11.5702461847107</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">2</SimpleData>
+		<SimpleData name="x">571304</SimpleData>
+		<SimpleData name="y">1279328</SimpleData>
+		<SimpleData name="university">Chea Sim University of Kamchaymear (formerly Maharishi Vedic University)</SimpleData>
+		<SimpleData name="website">http://csuk.edu.kh/</SimpleData>
+		<SimpleData name="email">info@csuk.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)12299570;(+855)12799587;(+855)98626327</SimpleData>
+		<SimpleData name="village">Thnal Keng</SimpleData>
+		<SimpleData name="commune">Smoang Cheung</SimpleData>
+		<SimpleData name="district">Kamchaymear</SimpleData>
+		<SimpleData name="province">Prey Veng</SimpleData>
+		<SimpleData name="establish_">1991</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Management; Faculty of Sciences and Mathamatics; Faculty of Agriculture; Faculty of Art, Humanities and Language; Faculty of Social Sciences; Faculty of Community Development</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>105.653985556651,11.5721755939915</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">3</SimpleData>
+		<SimpleData name="x">491108</SimpleData>
+		<SimpleData name="y">1279557</SimpleData>
+		<SimpleData name="university">National University of Management</SimpleData>
+		<SimpleData name="website">http://www.num.edu.kh/</SimpleData>
+		<SimpleData name="email">sengbunthoeun@num.edu.kh;sovicha_sim@yahoo.com;promsophanna@num.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23428120</SimpleData>
+		<SimpleData name="commune">Voat Phnum</SimpleData>
+		<SimpleData name="district">Daun Penh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E Dr. Hor Peng</SimpleData>
+		<SimpleData name="establish_">1983</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Management; Faculty of Finance and Accounting; Faculty of Tourism; Faculty of Economics; Faculty of Law; Faculty of Information Technology;Foreign Langauge Center;International Program</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.918441988826,11.5749733908703</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">4</SimpleData>
+		<SimpleData name="x">491183</SimpleData>
+		<SimpleData name="y">1286886</SimpleData>
+		<SimpleData name="university">Prek Leap National College of Agriculture</SimpleData>
+		<SimpleData name="website">https://pnsa.edu.kh/wp/</SimpleData>
+		<SimpleData name="email">info@pnsa.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)236910582;(+855)92767880</SimpleData>
+		<SimpleData name="commune">Prek Leap</SimpleData>
+		<SimpleData name="district">Chroy Changva</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Thun Vathana</SimpleData>
+		<SimpleData name="establish_">1950</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Agronomy;Facutly of Animal Science and Veterinary Medicine; Faculty of Fisheries;Faculty of Forestry Science;Faculty of Horticulture;Faculty of Agricultural Economics;Faculty of Agro-Industry;Faculty of Cadastral;Faculty of Media and Rural Dev</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.919110797242,11.641254322789</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">5</SimpleData>
+		<SimpleData name="x">489113</SimpleData>
+		<SimpleData name="y">1272579</SimpleData>
+		<SimpleData name="university">Royal University of Agriculture</SimpleData>
+		<SimpleData name="website">http://www.rua.edu.kh/</SimpleData>
+		<SimpleData name="email">rua@camnet.com.kh;RUA@forum.org.kh</SimpleData>
+		<SimpleData name="tel">(+855)23219829;(+885)23219753</SimpleData>
+		<SimpleData name="commune">Dangkao</SimpleData>
+		<SimpleData name="district">Dangkao</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Ngo Bunthan</SimpleData>
+		<SimpleData name="establish_">1964</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Veterinary Medicine; Faculty of Agronomy; Faculty of Land Manangment and Land Administration; Faculty of Animal Science; Faculty of Agricultural Economics and Rural Development; Faculty of Rubber Science; Faculty of Forestry and Environment; F</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.900166051055,11.5118609853211</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">6</SimpleData>
+		<SimpleData name="x">492148</SimpleData>
+		<SimpleData name="y">1278461</SimpleData>
+		<SimpleData name="university">Royal University of Fine Arts</SimpleData>
+		<SimpleData name="website">http://www.rufa.edu.kh/</SimpleData>
+		<SimpleData name="email">rufa@camnet.com.kh</SimpleData>
+		<SimpleData name="tel">(+855)23986417</SimpleData>
+		<SimpleData name="commune">Chey Chummeah</SimpleData>
+		<SimpleData name="district">Daun Penh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Bong Sovath</SimpleData>
+		<SimpleData name="establish_">1918</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Archeology;Faculty of Fine Arts;Faculty of Performing Arts;Faculty of Architecture and Urban Planning;Faculty of Music</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.927983466109,11.5650640772886</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">7</SimpleData>
+		<SimpleData name="x">491785</SimpleData>
+		<SimpleData name="y">1275212</SimpleData>
+		<SimpleData name="university">Royal University of Law and Economics</SimpleData>
+		<SimpleData name="website">http://www.rule.edu.kh/docsxv/</SimpleData>
+		<SimpleData name="email">rector@rule.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23362607;(+855)23214953</SimpleData>
+		<SimpleData name="commune">Tonle Basac</SimpleData>
+		<SimpleData name="district">Chamkamon</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Luy Channa</SimpleData>
+		<SimpleData name="establish_">1949</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Law; Faculty of Public Administration; Faculty of Economics and Management; Faculty of Informatics Economics</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.924661970508,11.5356803673615</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">8</SimpleData>
+		<SimpleData name="x">488115</SimpleData>
+		<SimpleData name="y">1278852</SimpleData>
+		<SimpleData name="university">Royal University of Phnom Penh</SimpleData>
+		<SimpleData name="website">http://www.rupp.edu.kh/</SimpleData>
+		<SimpleData name="email">secretary@rupp.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23883640;(+855)23885419;(+855)23884154</SimpleData>
+		<SimpleData name="commune">Tuek L'ak Ti Muoy</SimpleData>
+		<SimpleData name="district">Tuol Kouk</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E Dr. Chet Chealy</SimpleData>
+		<SimpleData name="establish_">1960</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Science; Faculty of Social Science and Humanities; Faculty of Engineering; Faculty of Development Studies; Faculty of Education, Institute of Foreign Languages</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.890992493289,11.5685885913134</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">9</SimpleData>
+		<SimpleData name="x">583724</SimpleData>
+		<SimpleData name="y">1227140</SimpleData>
+		<SimpleData name="university">Svay Rieng University</SimpleData>
+		<SimpleData name="website">http://www.sru.edu.kh/</SimpleData>
+		<SimpleData name="email">info@sru.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)16233778;(+855)77979778;(+855)717779778;(+855)44715776</SimpleData>
+		<SimpleData name="village">Chambak</SimpleData>
+		<SimpleData name="commune">Chek</SimpleData>
+		<SimpleData name="district">Svay Rieng City</SimpleData>
+		<SimpleData name="province">Svay Rieng</SimpleData>
+		<SimpleData name="rector">H.E Tum Saravuth</SimpleData>
+		<SimpleData name="establish_">2005</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Agriculture; Faculty of Arts, Humanities, and Foreign Language; Faculty of Business Administration; Faculty of Science and Technology; Faculty of Social Sciences</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>105.766633749552,11.0999605918963</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">10</SimpleData>
+		<SimpleData name="x">490990</SimpleData>
+		<SimpleData name="y">1279451</SimpleData>
+		<SimpleData name="university">University of Health Sciences - Cambodia (First Campus)</SimpleData>
+		<SimpleData name="website">http://uhs.edu.kh/</SimpleData>
+		<SimpleData name="email">info@uhs.edu.kh;media@uhs.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23430559;(+855)93278899</SimpleData>
+		<SimpleData name="commune">Sras Chak</SimpleData>
+		<SimpleData name="district">Daun Penh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E Prof. Saphonn Vonthanak</SimpleData>
+		<SimpleData name="establish_">1946</SimpleData>
+		<SimpleData name="faculty_kh">Medical College; Faculty of Pharmaceutical Sciences; Public Health; College Dental Institute; Technical School for Medical Care</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.917359967174,11.5740144574545</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">11</SimpleData>
+		<SimpleData name="x">275808</SimpleData>
+		<SimpleData name="y">1502213</SimpleData>
+		<SimpleData name="university">Mean Chey University</SimpleData>
+		<SimpleData name="website">http://www.mcu.edu.kh/</SimpleData>
+		<SimpleData name="email">oryarath@yahoo.com;nimol_enn2006@yahoo.com;sien_mon@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)546311115;(+855)87606034;(+855)12240954;(+855)17868626</SimpleData>
+		<SimpleData name="village">Banoy</SimpleData>
+		<SimpleData name="commune">Teuk Thla</SimpleData>
+		<SimpleData name="district">Serei Sophaon</SimpleData>
+		<SimpleData name="province">Banteay Meanchey</SimpleData>
+		<SimpleData name="rector">H.E Sam Nga</SimpleData>
+		<SimpleData name="establish_">2008</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Management and Tourism; Faculty of Science and Technology; Faculty of Social Science and Community Development; Faculty of Arts Humanity and Language; Faculty of Agriculture and Food Processing</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>102.928084973067,13.5798528387502</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">12</SimpleData>
+		<SimpleData name="x">306986</SimpleData>
+		<SimpleData name="y">1447355</SimpleData>
+		<SimpleData name="university">University of Battambang</SimpleData>
+		<SimpleData name="website">http://ubb.edu.kh/</SimpleData>
+		<SimpleData name="email">info@ubb.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)53952905/(+855)53952920</SimpleData>
+		<SimpleData name="village">O Khcheay</SimpleData>
+		<SimpleData name="commune">Sangkat Preaek Preah Sdach</SimpleData>
+		<SimpleData name="district">Battambang City</SimpleData>
+		<SimpleData name="province">Battambang</SimpleData>
+		<SimpleData name="rector">Sieng Emtotim</SimpleData>
+		<SimpleData name="establish_">1968</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Business Administration and Tourism;Faculty of Sociology and Community Development;Faculty of Agriculture and Food Processing;Faculty of Arts, Humanities and Education;Institute of Foreign Languages;Faculty of Science and Technology</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>103.21974906307,13.0862688804573</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">13</SimpleData>
+		<SimpleData name="x">490377</SimpleData>
+		<SimpleData name="y">1288166</SimpleData>
+		<SimpleData name="university">National Institue of Posts, Telecommunications and Information Communication Technology</SimpleData>
+		<SimpleData name="website">http://niptict.edu.kh/</SimpleData>
+		<SimpleData name="email">info@niptict.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)15335877</SimpleData>
+		<SimpleData name="commune">Mithapheap</SimpleData>
+		<SimpleData name="district">7 Makara</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Seng Sopheap</SimpleData>
+		<SimpleData name="establish_">2014</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of E-Commerce and Logistics;Faculty of Telecoms and Networking;Faculty of Computer Science</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.911712719164,11.6528279599776</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">14</SimpleData>
+		<SimpleData name="x">490990</SimpleData>
+		<SimpleData name="y">1279451</SimpleData>
+		<SimpleData name="university">University of Health Sciences (Second Campus)</SimpleData>
+		<SimpleData name="website">http://uhs.edu.kh/</SimpleData>
+		<SimpleData name="email">info@uhs.edu.kh;media@uhs.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23430559;(+855)93278899</SimpleData>
+		<SimpleData name="commune">Tumnob Tuek</SimpleData>
+		<SimpleData name="district">Chamkar Mon</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E Prof. Saphonn Vonthanak</SimpleData>
+		<SimpleData name="establish_">1946</SimpleData>
+		<SimpleData name="faculty_kh">Medical College; Faculty of Pharmaceutical Sciences; Public Health; College Dental Institute; Technical School for Medical Care</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.917359967174,11.5740144574545</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">15</SimpleData>
+		<SimpleData name="x">492818</SimpleData>
+		<SimpleData name="y">1278189</SimpleData>
+		<SimpleData name="university">Preah Sihanouk Raja Buddhist University</SimpleData>
+		<SimpleData name="website">http://www.sbu.edu.kh/</SimpleData>
+		<SimpleData name="email">Universitysbu@yahoo.com</SimpleData>
+		<SimpleData name="tel">(+855)23998849;(+855)12583814</SimpleData>
+		<SimpleData name="commune">Chey Chummeah</SimpleData>
+		<SimpleData name="district">Doun Penh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Ven Dr. Khy Sovanratana</SimpleData>
+		<SimpleData name="establish_">1954</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Philosophy and Religions;Faculty of Science Education and Information Technology;Faculty of Khmer Literature;Faculty of Pali-Sanskrit and Foreign Languages;The Buddhist Center of Pedagogy</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.934129106559,11.5626056642435</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">16</SimpleData>
+		<SimpleData name="x">587115</SimpleData>
+		<SimpleData name="y">1315297</SimpleData>
+		<SimpleData name="university">University of Heng Samrin Thbongkhmum</SimpleData>
+		<SimpleData name="website">www.uhst.edu.kh</SimpleData>
+		<SimpleData name="email">vannaro@gmail.com;pintara30@gmail.com;uhstpintara@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)12734233;(+855)12797879</SimpleData>
+		<SimpleData name="village">Chamkar Mei Sak</SimpleData>
+		<SimpleData name="commune">Sralab</SimpleData>
+		<SimpleData name="district">Tboung Khmum</SimpleData>
+		<SimpleData name="province">Tboung Khmum</SimpleData>
+		<SimpleData name="rector">H.E. Pin Vannaro</SimpleData>
+		<SimpleData name="establish_">2014</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Agriculture;Faculty of Literature and Human Sciences;Institute of Foreign Languages;Institute of Information Technology;Institute of Technical and Professional Training</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>105.799928546271,11.8970677139922</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">17</SimpleData>
+		<SimpleData name="x">614939</SimpleData>
+		<SimpleData name="y">1381518</SimpleData>
+		<SimpleData name="university">University of Kratie</SimpleData>
+		<SimpleData name="website">www.ukc.edu.kh</SimpleData>
+		<SimpleData name="email">kyvisal99@gmail.com;bouvannarith88@gmail.com;ngy_mithuna@yahoo.com</SimpleData>
+		<SimpleData name="tel">(+855)16617242;(+855)12688677;(+855)15900002</SimpleData>
+		<SimpleData name="village">Srae Sdau</SimpleData>
+		<SimpleData name="commune">Ou Ruessei</SimpleData>
+		<SimpleData name="district">Kracheh</SimpleData>
+		<SimpleData name="province">Kratie</SimpleData>
+		<SimpleData name="rector">Dr. Ngy Laymithuna</SimpleData>
+		<SimpleData name="establish_">2017</SimpleData>
+		<SimpleData name="faculty_kh">Facuty of Agriculture;Facutly of Animal Science and Veterinary Medicine;Faculty of Agro-Industry;Faculty of Engineering;Faculty of Business Administration;Institute of Fisheries Science;Institute of Information Technology Communication;Institute of Langu</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>106.057765600877,12.4949791135521</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">18</SimpleData>
+		<SimpleData name="x">491359</SimpleData>
+		<SimpleData name="y">1280506</SimpleData>
+		<SimpleData name="university">Cambodia Maritime Institute</SimpleData>
+		<SimpleData name="website">http://www.cmi.edu.kh/</SimpleData>
+		<SimpleData name="email">ppapmpwt@online.com</SimpleData>
+		<SimpleData name="tel">(+855)16940908;(+855)10444381</SimpleData>
+		<SimpleData name="commune">Sras Chak</SimpleData>
+		<SimpleData name="district">Doun Penh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E. Hei Bavy</SimpleData>
+		<SimpleData name="establish_">2008</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Marine Navigation</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.920741758972,11.5835564490964</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">19</SimpleData>
+		<SimpleData name="x">507357</SimpleData>
+		<SimpleData name="y">1424496</SimpleData>
+		<SimpleData name="university">Kampong Chheuteal Institute of Technology</SimpleData>
+		<SimpleData name="email">pechseangchula@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)89365861</SimpleData>
+		<SimpleData name="village">Sambour</SimpleData>
+		<SimpleData name="commune">Sambour</SimpleData>
+		<SimpleData name="district">Prasat Sambour</SimpleData>
+		<SimpleData name="province">Kampong Thom</SimpleData>
+		<SimpleData name="rector">Mr. Pech Seang</SimpleData>
+		<SimpleData name="faculty_kh">Electronics Skills;Telecommunications skills;Electrical Power Skills;Animal Sciences Skill;Crop Science Skills;Commercial Computer Skills;Tourism Management and Hotel Skills</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>105.067812201836,12.8856932911385</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">20</SimpleData>
+		<SimpleData name="x">422269</SimpleData>
+		<SimpleData name="y">1305444</SimpleData>
+		<SimpleData name="university">Kampong Speu Institute of Technology</SimpleData>
+		<SimpleData name="website">http://ksit.edu.kh/</SimpleData>
+		<SimpleData name="email">bunheharth@hotmail.com;siek_nguon@yahoo.com</SimpleData>
+		<SimpleData name="tel">(+855)85483609;(+855)16556618</SimpleData>
+		<SimpleData name="village">Ou Angkum</SimpleData>
+		<SimpleData name="commune">Amleang</SimpleData>
+		<SimpleData name="district">Thpong</SimpleData>
+		<SimpleData name="province">Kampong Speu</SimpleData>
+		<SimpleData name="rector">Dr. Hong Kim Cheang</SimpleData>
+		<SimpleData name="faculty_kh">Department of Agronomy;Departement of Animal Science;Department of Business Computer</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.286465972635,11.8082003437975</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">21</SimpleData>
+		<SimpleData name="x">481279</SimpleData>
+		<SimpleData name="y">1273505</SimpleData>
+		<SimpleData name="university">Health Science Institute of R.C.A.F</SimpleData>
+		<SimpleData name="website">http://www.insti-sante.edu.kh</SimpleData>
+		<SimpleData name="email">ihs.rcaf@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)236465777;(+855)979762476;(+855)977873176:(+855)11978347</SimpleData>
+		<SimpleData name="village">Kraing Daun Tey</SimpleData>
+		<SimpleData name="commune">Chomchao</SimpleData>
+		<SimpleData name="district">Khan Por sen chey</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">?. ?????. ??? ?????</SimpleData>
+		<SimpleData name="establish_">2009</SimpleData>
+		<SimpleData name="faculty_kh">Medical College; Faculty of Pharmaceutical Sciences; College Dental Institute; Technical School for Medical Care</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.828323255004,11.520201906659</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">22</SimpleData>
+		<SimpleData name="x">487938</SimpleData>
+		<SimpleData name="y">1272563</SimpleData>
+		<SimpleData name="university">Institute of Electrical Science</SimpleData>
+		<SimpleData name="website">www.ies.edu.kh</SimpleData>
+		<SimpleData name="email">institute.electrical.science@gmail.com;info@ies.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)12292393;(+855)977336643;(+855)12649826</SimpleData>
+		<SimpleData name="village">Sambuor</SimpleData>
+		<SimpleData name="commune">Dangkao</SimpleData>
+		<SimpleData name="district">Dangkao</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Oum Piseth</SimpleData>
+		<SimpleData name="faculty_kh">Department of Electrical Science</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.889391353746,11.5117123918742</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">23</SimpleData>
+		<SimpleData name="x">549353</SimpleData>
+		<SimpleData name="y">1326018</SimpleData>
+		<SimpleData name="university">Kampong Cham National School of Agriculture</SimpleData>
+		<SimpleData name="email">sereisuon@yahoo.com;venghengva@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)42943399;(+855)12884110;(+855)12454572</SimpleData>
+		<SimpleData name="village">Ti Prammuoy</SimpleData>
+		<SimpleData name="commune">Veal Vong</SimpleData>
+		<SimpleData name="district">Kampong Cham</SimpleData>
+		<SimpleData name="province">Kampong Cham</SimpleData>
+		<SimpleData name="rector">Mr. Suon Serey</SimpleData>
+		<SimpleData name="faculty_kh">Department of Agronomy;Department of Animal Science and Veterinary Medicine;Department of Rubber Science;Department of Fisheries;Department of Agricultural Economics and Rural Development</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">MOEYS_KH__15.08.2017.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>105.453352848949,11.9947890693039</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">24</SimpleData>
+		<SimpleData name="x">486682</SimpleData>
+		<SimpleData name="y">1278653</SimpleData>
+		<SimpleData name="university">Industrial Technical Institute</SimpleData>
+		<SimpleData name="website">http://iti.edu.kh/</SimpleData>
+		<SimpleData name="email">itikhmer@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)12407960;(+855)89459098;(+855)11621783</SimpleData>
+		<SimpleData name="commune">Teuk Thla</SimpleData>
+		<SimpleData name="district">Sen Sok</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Mr. Moan Sam Oeurn</SimpleData>
+		<SimpleData name="establish_">2008</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Information Technology;Faculty of Mechanical of Automobile Engineering,Faculty of Electrical Engineering;Faculty of General Mechanical Engineering</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_ITI__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.87785002386,11.5667836642825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">25</SimpleData>
+		<SimpleData name="x">487718</SimpleData>
+		<SimpleData name="y">1275410</SimpleData>
+		<SimpleData name="university">National Institute of Business</SimpleData>
+		<SimpleData name="website">http://www.nib.edu.kh/</SimpleData>
+		<SimpleData name="email">tepoeuntvet@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)12606572;(+855)12853030;(+855)11722188</SimpleData>
+		<SimpleData name="commune">Steung Mean Chey</SimpleData>
+		<SimpleData name="district">Mean Chey</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Tep Oeun</SimpleData>
+		<SimpleData name="establish_">1979</SimpleData>
+		<SimpleData name="faculty_kh">Department of Management; Department of Accounting and Finance; Department of Banking and Finance; Department of Sales and Marketing; Department of English; Department of Information Technology</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_NIB__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.887363700741,11.5374589470503</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">26</SimpleData>
+		<SimpleData name="x">478353</SimpleData>
+		<SimpleData name="y">1282121</SimpleData>
+		<SimpleData name="university">National Polytechnic Institute of Cambodia</SimpleData>
+		<SimpleData name="website">http://www.npic.edu.kh/</SimpleData>
+		<SimpleData name="email">npicinfo@gmail.com</SimpleData>
+		<SimpleData name="tel">(+855)236915193;(+855)98681634;(+855)12381246;(+855)11769003;(+855)12771790</SimpleData>
+		<SimpleData name="village">Prey Popel</SimpleData>
+		<SimpleData name="commune">Samraong Kraom</SimpleData>
+		<SimpleData name="district">Pur SenChey</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E. Bun Pearin</SimpleData>
+		<SimpleData name="establish_">2005</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Electrical Engineering; Faculty of Energy Technology; Faculty of Telecommunication; Faculty of Electronic Engineering; Faculty of Civil Engineering; Faculty of Architecture; Faculty of Mechanical Engineering; Faculty of Mechanical of Automobil</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_NPIC__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.801436263025,11.598104591247</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">27</SimpleData>
+		<SimpleData name="x">486557</SimpleData>
+		<SimpleData name="y">1278723</SimpleData>
+		<SimpleData name="university">National Technical Training Institute</SimpleData>
+		<SimpleData name="website">http://www.ntti.edu.kh/</SimpleData>
+		<SimpleData name="email">info@ntti.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23883039</SimpleData>
+		<SimpleData name="commune">Tuek Thla</SimpleData>
+		<SimpleData name="district">Saensokh</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">H.E. Yok Sothy,</SimpleData>
+		<SimpleData name="establish_">1999</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Civil Engineering; Faculty of Infomation Technology; Faculty of Electronic Engineering; Faculty of Architecturs; Faculty of Electrical Engineering</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_NTTI__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.8767032742,11.5674162335875</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">28</SimpleData>
+		<SimpleData name="x">486751</SimpleData>
+		<SimpleData name="y">1278551</SimpleData>
+		<SimpleData name="university">Preah Kossomak Polytechnic Institute</SimpleData>
+		<SimpleData name="website">http://www.ppiedu.com/</SimpleData>
+		<SimpleData name="email">petersoeun@yahoo.com; rachanappi@outlook.com</SimpleData>
+		<SimpleData name="tel">(+855)23882126</SimpleData>
+		<SimpleData name="commune">Teuk Thla</SimpleData>
+		<SimpleData name="district">Sen Sok</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Hem Chantha</SimpleData>
+		<SimpleData name="establish_">1965</SimpleData>
+		<SimpleData name="faculty_kh">Department of Technology; Department of Business</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_PPI__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.878483274593,11.5658614789325</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#public_universities">
+		<SimpleData name="map_id">29</SimpleData>
+		<SimpleData name="x">489372</SimpleData>
+		<SimpleData name="y">1278669</SimpleData>
+		<SimpleData name="university">University of Economics and Finance</SimpleData>
+		<SimpleData name="website">http://www.uef.edu.kh/</SimpleData>
+		<SimpleData name="email">info@uef.edu.kh</SimpleData>
+		<SimpleData name="tel">(+855)23882610</SimpleData>
+		<SimpleData name="commune">Boeng Kak 1</SimpleData>
+		<SimpleData name="district">Tuol Kouk</SimpleData>
+		<SimpleData name="province">Phnom Penh</SimpleData>
+		<SimpleData name="rector">Dr. Chuon Rattanak</SimpleData>
+		<SimpleData name="establish_">2010</SimpleData>
+		<SimpleData name="faculty_kh">Faculty of Science and Technology; Faculty of Economics and Social Science; Faculty of Art and Foreign Language; Faculty of Business and Finance; Faculty of Tourism and International Relation</SimpleData>
+		<SimpleData name="last_updat">02/07/2018</SimpleData>
+		<SimpleData name="reference">Screencaputerd_UEF__07.02.2018.pdf</SimpleData>
+		<SimpleData name="language">English</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>104.902522076374,11.5669377116996</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

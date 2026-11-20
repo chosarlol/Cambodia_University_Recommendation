@@ -1,0 +1,28 @@
+university_id,university_name,major,degree_level,annual_tuition_usd,source
+sample-riverside-it,SAMPLE - Riverside Institute of Technology,Information Technology,Bachelor,1200,SAMPLE DATA - NOT REAL
+sample-riverside-it,SAMPLE - Riverside Institute of Technology,Computer Science,Bachelor,1350,SAMPLE DATA - NOT REAL
+sample-riverside-it,SAMPLE - Riverside Institute of Technology,Engineering,Bachelor,1500,SAMPLE DATA - NOT REAL
+sample-riverside-it,SAMPLE - Riverside Institute of Technology,Business Administration,Bachelor,900,SAMPLE DATA - NOT REAL
+sample-mekong-business,SAMPLE - Mekong Business College,Business Administration,Bachelor,800,SAMPLE DATA - NOT REAL
+sample-mekong-business,SAMPLE - Mekong Business College,Finance and Accounting,Bachelor,850,SAMPLE DATA - NOT REAL
+sample-mekong-business,SAMPLE - Mekong Business College,Marketing,Bachelor,780,SAMPLE DATA - NOT REAL
+sample-mekong-business,SAMPLE - Mekong Business College,Business Administration,Master,1800,SAMPLE DATA - NOT REAL
+sample-angkor-heritage,SAMPLE - Angkor Heritage University,Tourism and Hospitality,Bachelor,700,SAMPLE DATA - NOT REAL
+sample-angkor-heritage,SAMPLE - Angkor Heritage University,Arts and Humanities,Bachelor,600,SAMPLE DATA - NOT REAL
+sample-angkor-heritage,SAMPLE - Angkor Heritage University,Foreign Languages,Bachelor,650,SAMPLE DATA - NOT REAL
+sample-northwest-btb,SAMPLE - Northwest University of Battambang,Agriculture,Bachelor,450,SAMPLE DATA - NOT REAL
+sample-northwest-btb,SAMPLE - Northwest University of Battambang,Education,Bachelor,400,SAMPLE DATA - NOT REAL
+sample-northwest-btb,SAMPLE - Northwest University of Battambang,Information Technology,Bachelor,550,SAMPLE DATA - NOT REAL
+sample-golden-coast,SAMPLE - Golden Coast Institute,Tourism and Hospitality,Bachelor,900,SAMPLE DATA - NOT REAL
+sample-golden-coast,SAMPLE - Golden Coast Institute,Logistics and Supply Chain,Bachelor,1100,SAMPLE DATA - NOT REAL
+sample-golden-coast,SAMPLE - Golden Coast Institute,Business Administration,Bachelor,850,SAMPLE DATA - NOT REAL
+sample-central-plains,SAMPLE - Central Plains University,Health Sciences,Bachelor,1600,SAMPLE DATA - NOT REAL
+sample-central-plains,SAMPLE - Central Plains University,Education,Bachelor,420,SAMPLE DATA - NOT REAL
+sample-central-plains,SAMPLE - Central Plains University,Social Sciences,Bachelor,500,SAMPLE DATA - NOT REAL
+sample-capital-health,SAMPLE - Capital School of Health Sciences,Nursing,Bachelor,1900,SAMPLE DATA - NOT REAL
+sample-capital-health,SAMPLE - Capital School of Health Sciences,Pharmacy,Bachelor,2400,SAMPLE DATA - NOT REAL
+sample-capital-health,SAMPLE - Capital School of Health Sciences,Public Health,Bachelor,1400,SAMPLE DATA - NOT REAL
+sample-capital-health,SAMPLE - Capital School of Health Sciences,Pharmacy,Master,3500,SAMPLE DATA - NOT REAL
+sample-southgate-poly,SAMPLE - Southgate Polytechnic,Engineering,Bachelor,1000,SAMPLE DATA - NOT REAL
+sample-southgate-poly,SAMPLE - Southgate Polytechnic,Information Technology,Bachelor,950,SAMPLE DATA - NOT REAL
+sample-southgate-poly,SAMPLE - Southgate Polytechnic,Electronics,Bachelor,1050,SAMPLE DATA - NOT REAL

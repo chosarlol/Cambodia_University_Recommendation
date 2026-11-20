@@ -1,0 +1,14 @@
+# The site theme. These colours match utils/style.py.
+[theme]
+base = "light"
+primaryColor = "#1a56db"              # buttons and links (brand blue)
+backgroundColor = "#ffffff"           # page background
+secondaryBackgroundColor = "#f5f7fb"  # inputs, tables, sidebar
+textColor = "#17202e"                 # normal text
+font = "sans serif"
+
+[server]
+port = 8501
+
+[browser]
+gatherUsageStats = false
