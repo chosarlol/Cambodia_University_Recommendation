@@ -134,6 +134,36 @@ def render_facts(university: dict):
                 st.metric("Fee (per year)", fee)
                 st.caption("Sample data - these fees are invented, not real.")
 
+        render_shifts(university)
+
+
+def render_shifts(university: dict):
+    """
+    When you can study here: morning, afternoon, evening or weekend.
+
+    This matters a lot for students who work during the day. The Ministry file
+    does not contain it, so we show only what we checked ourselves and say
+    plainly when we have not checked yet.
+    """
+    info = data.get_shifts(university["id"])
+
+    with st.container(border=True):
+        style.section_title("When you can study")
+
+        if info["known"]:
+            st.write(f"**Shifts:** {data.format_shifts(university['id'])}")
+            if info["source"]:
+                st.caption(f"Checked against: {info['source']}")
+            if info["checked_on"]:
+                st.caption(f"Checked on: {info['checked_on']}")
+        else:
+            st.write(f"**Shifts:** {data.SHIFT_NOT_PUBLISHED}")
+            st.caption(
+                "The Ministry data does not list study times and we have not "
+                "confirmed this university yet. Ask them whether they run "
+                "morning, afternoon, evening or weekend classes."
+            )
+
 
 def render_majors(university: dict):
     """The list of majors / faculties, with fees when we have them."""

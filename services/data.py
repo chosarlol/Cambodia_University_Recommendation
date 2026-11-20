@@ -34,14 +34,34 @@ import streamlit as st
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
 SAMPLE_DIR = PROJECT_ROOT / "data" / "sample"
+COLLECTED_DIR = PROJECT_ROOT / "data" / "collected"
 
 PUBLIC_CSV = RAW_DIR / "public-university-of-cambodia-english-language.csv"
 PUBLIC_KML = RAW_DIR / "public_universities.kml"
 PRIVATE_SAMPLE_CSV = SAMPLE_DIR / "private_universities_SAMPLE.csv"
 MAJORS_SAMPLE_CSV = SAMPLE_DIR / "majors_tuition_SAMPLE.csv"
+SHIFTS_CSV = COLLECTED_DIR / "study_shifts.csv"
 
 # Text we show when a fee is not in our data. We never guess a fee.
 FEE_NOT_PUBLISHED = "Fee not published"
+
+# ---------------------------------------------------------------------------
+# Study shifts (morning / afternoon / evening / weekend)
+# ---------------------------------------------------------------------------
+# Many Cambodian students work during the day, so the shift decides whether a
+# university is possible for them at all.
+#
+# The MOEYS file does NOT contain this information - none of its 17 columns
+# mention study times. So we collect it ourselves in
+# data/collected/study_shifts.csv, one row per university, each with the source
+# it was checked against. A university we have not checked yet stays empty and
+# the app says so; we never assume a university runs evening classes.
+
+SHIFT_NOT_PUBLISHED = "Shift not published"
+
+# The only values allowed in the "shifts" column of the collection file.
+# Written in the order of a normal day so lists always read the same way.
+KNOWN_SHIFTS = ["morning", "afternoon", "evening", "weekend"]
 
 # The official source of the real (public university) rows.
 PUBLIC_SOURCE = "MOEYS Cambodia - MOEYS_KH__15.08.2017.pdf"
@@ -358,6 +378,76 @@ def load_majors() -> pd.DataFrame:
         all_majors["annual_tuition_usd"], errors="coerce"
     )
     return all_majors
+
+
+@st.cache_data
+def load_study_shifts() -> dict:
+    """
+    Read data/collected/study_shifts.csv and return what we know about study
+    times, as {university_id: {"shifts": [...], "source": str, "checked_on": str}}.
+
+    A university is in this dictionary ONLY if someone actually checked it and
+    wrote the shifts in the file. Everything else is simply absent, which the
+    rest of the app reads as "we do not know" - never as "no evening classes".
+
+    The file is optional: if it is missing the app still works, it just has no
+    shift information at all.
+    """
+    if not SHIFTS_CSV.exists():
+        return {}
+
+    table = pd.read_csv(SHIFTS_CSV, dtype=str).fillna("")
+
+    known = {}
+    for _, row in table.iterrows():
+        university_id = _text(row.get("university_id"))
+        raw_shifts = _text(row.get("shifts"))
+
+        # An empty "shifts" cell means nobody has checked this university yet.
+        if not university_id or not raw_shifts:
+            continue
+
+        # "morning;evening" -> ["morning", "evening"], keeping the day order
+        # and quietly dropping anything that is not one of the four words.
+        written = [part.strip().lower() for part in raw_shifts.split(";")]
+        shifts = [shift for shift in KNOWN_SHIFTS if shift in written]
+        if not shifts:
+            continue
+
+        known[university_id] = {
+            "shifts": shifts,
+            "source": _text(row.get("source")),
+            "checked_on": _text(row.get("checked_on")),
+        }
+
+    return known
+
+
+def get_shifts(university_id: str) -> dict:
+    """
+    What we know about one university's study times.
+
+    Always returns a dictionary, so a page never has to check for None:
+        {"known": False, "shifts": [], "source": "", "checked_on": ""}
+    """
+    found = load_study_shifts().get(university_id)
+    if not found:
+        return {"known": False, "shifts": [], "source": "", "checked_on": ""}
+
+    return {"known": True, **found}
+
+
+def format_shifts(university_id: str) -> str:
+    """
+    A ready-to-print line about study times, e.g. "Morning, Evening".
+
+    Returns SHIFT_NOT_PUBLISHED when nobody has checked this university yet.
+    """
+    info = get_shifts(university_id)
+    if not info["known"]:
+        return SHIFT_NOT_PUBLISHED
+
+    return ", ".join(shift.capitalize() for shift in info["shifts"])
 
 
 @st.cache_data
