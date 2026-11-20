@@ -1,4 +1,6 @@
-streamlit>=1.36
+# 1.46+ is required for st.navigation(position="top"); 1.67 is the version the
+# app was built and tested on, so that is the floor we deploy with.
+streamlit>=1.67
 pandas>=2.0
 plotly>=5.20
 folium>=0.16
