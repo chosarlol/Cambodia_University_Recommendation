@@ -42,7 +42,7 @@ else:
                 st.write(f"**Type:** {university['type']}")
                 st.write(f"**Province:** {university['province']}")
                 st.write(f"**Founded:** {university['established_year'] or 'Not published'}")
-                st.write(f"**Yearly fee:** {data.format_tuition(uni_id)}")
+                st.write(f"**Yearly fee:** {data.format_tuition_markdown(uni_id)}")
                 st.write(f"**Majors:** {len(university['majors'])}")
                 with st.expander("See all majors"):
                     for major in university["majors"]:

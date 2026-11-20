@@ -71,15 +71,15 @@ def render_results_table(results):
     """
     Show the matching universities as one table that is easy to scan.
 
-    Clicking a row opens that university's own page.
+    The visitor ticks one or more rows, then presses the blue button to open
+    those universities. The Detail page shows each one in its own tab.
     """
     table = results[["name", "type", "province", "established_year"]].copy()
     table.columns = ["University", "Type", "Province", "Founded"]
     table["Majors"] = results["majors"].map(len)
     table["Yearly fee"] = results["id"].map(data.format_tuition)
 
-    # When we come back from a university page, forget the old row selection,
-    # otherwise the page would jump straight back to that university.
+    # When we come back from a university page, start with no ticked rows.
     if st.session_state.pop("reset_browse_selection", False):
         st.session_state.pop("browse_table", None)
 
@@ -88,14 +88,39 @@ def render_results_table(results):
         width="stretch",
         hide_index=True,
         key="browse_table",
-        on_select="rerun",          # tell Streamlit to rerun when a row is clicked
-        selection_mode="single-row",
+        on_select="rerun",          # rerun when a box is ticked, to update the button
+        selection_mode="multi-row",
     )
 
-    # If the visitor clicked a row, open that university's page.
-    if event.selection.rows:
-        clicked_row = event.selection.rows[0]
-        state.open_university(results.iloc[clicked_row]["id"])
+    ticked_rows = event.selection.rows
+    count = len(ticked_rows)
+    if count == 0:
+        label = "Open selected universities"
+    elif count == 1:
+        label = "Open 1 selected university"
+    else:
+        label = f"Open {count} selected universities"
+
+    col_button, col_hint = st.columns([2, 3], vertical_alignment="center")
+    with col_button:
+        clicked = st.button(
+            label,
+            type="primary",             # the blue button
+            icon=":material/open_in_new:",
+            disabled=count == 0,
+            width="stretch",
+            key="open_selected",
+        )
+    with col_hint:
+        st.caption(
+            "Tick the box next to one or more universities, then press the button."
+            if count == 0
+            else "Each university opens in its own tab."
+        )
+
+    if clicked and count:
+        # Keep the order the universities have in the table.
+        state.open_universities([results.iloc[row]["id"] for row in sorted(ticked_rows)])
         st.session_state["reset_browse_selection"] = True
         st.switch_page("pages/detail.py")
 
@@ -126,7 +151,7 @@ def render_result_card(university):
             if university.get("name_kh"):
                 st.markdown(f"**{university['name_kh']}**")
 
-            fee = data.format_tuition(uni_id)
+            fee = data.format_tuition_markdown(uni_id)
             st.caption(
                 f"{university['type']} · {university['province']} · "
                 f"{len(university['majors'])} majors · {fee}"
@@ -159,8 +184,9 @@ def render_browse_page():
 
     st.title("🧭 Explore universities")
     st.caption(
-        "Filter the list, or search by name. **Click a university to open its "
-        "page.** Use ☆ Favorite to keep one for later."
+        "Filter the list, or search by name. **Tick one or more universities "
+        "and press Open** to see their majors and fees. Use ☆ Favorite to keep "
+        "one for later."
     )
 
     filters = render_filters()

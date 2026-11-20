@@ -37,7 +37,7 @@ else:
                     st.switch_page("pages/detail.py")
                 st.caption(
                     f"{university['type']} · {university['province']} · "
-                    f"{data.format_tuition(uni_id)}"
+                    f"{data.format_tuition_markdown(uni_id)}"
                 )
             with col_button:
                 if st.button("Remove", key=f"unfav_{uni_id}", width="stretch"):

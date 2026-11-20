@@ -60,6 +60,63 @@ footer {{ visibility: hidden; height: 0; }}
 }}
 .hero .accent {{ color: {GOLD}; }}
 
+/* The Home hero with changing university photos behind the text.
+   The photos and their timing are set in app.py (HERO_SLIDES). */
+.hero.hero-photo {{
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    padding-bottom: 70px;          /* room for the university name button */
+    background: {DARK_BLUE};       /* shown for a moment before a photo loads */
+}}
+.hero-slide {{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}}
+/* Dark blue shade over the photo so the white text stays easy to read. */
+.hero-shade {{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg,
+        rgba(21, 49, 126, 0.85) 0%,
+        rgba(21, 49, 126, 0.55) 45%,
+        rgba(21, 49, 126, 0.05) 100%);
+}}
+.hero-text {{ position: relative; }}
+
+/* The box around the hero, so the name buttons can sit on top of it. */
+.st-key-hero_box {{ position: relative; gap: 0; }}
+/* Each name button: bottom right corner of the hero. */
+[class*="st-key-hero_link_"] {{
+    position: absolute;
+    right: 22px;
+    bottom: 48px;                  /* the hero has a 26px bottom margin */
+    width: auto !important;
+    opacity: 0;
+    z-index: 2;
+}}
+[class*="st-key-hero_link_"] button {{
+    background: rgba(255, 255, 255, 0.92);
+    color: {DARK_BLUE};
+    border: none;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}}
+[class*="st-key-hero_link_"] button:hover {{
+    background: {GOLD};
+    color: {DARK_BLUE};
+}}
+/* People who ask their device for less motion get the first photo only. */
+@media (prefers-reduced-motion: reduce) {{
+    .hero-slide, [class*="st-key-hero_link_"] {{ animation: none !important; }}
+    .hero-slide-0, .st-key-hero_link_0 {{ opacity: 1; visibility: visible; }}
+}}
+
 /* ---------- 4. Section titles ---------- */
 .section-title {{
     font-size: 1.45rem;
@@ -145,7 +202,9 @@ footer {{ visibility: hidden; height: 0; }}
 /* ---------- 9. Phone-sized screens ---------- */
 @media (max-width: 640px) {{
     .hero {{ padding: 28px 20px; }}
+    .hero.hero-photo {{ min-height: 260px; padding-bottom: 80px; }}
     .hero h1 {{ font-size: 1.75rem; }}
+    [class*="st-key-hero_link_"] {{ right: 12px; left: 12px; bottom: 40px; }}
     .block-container {{ padding-left: 1rem; padding-right: 1rem; }}
     .card-text {{ min-height: 0; }}
 }}
@@ -183,9 +242,7 @@ def site_footer():
         <strong>Data sources:</strong> Public university information comes from the
         Ministry of Education, Youth and Sport (MOEYS), Cambodia -
         document <em>MOEYS_KH__15.08.2017.pdf</em>, file last updated 02/07/2018.
-        Private universities and all tuition fees shown on this site are
-        <strong>sample (invented) data</strong> used for testing; their names start
-        with "SAMPLE -".<br><br>
+        Detailed majors and fees were collected by our team (see the About page). Private universities have not been added yet.<br><br>
         <strong>Please note:</strong> this information may be out of date. Always
         confirm majors, fees and admission requirements directly with the
         university before you apply.<br><br>

@@ -78,7 +78,7 @@ else:
                     st.switch_page("pages/detail.py")
                 st.caption(
                     f"{university['type']} · {university['province']} · "
-                    f"{data.format_tuition(uni_id)}"
+                    f"{data.format_tuition_markdown(uni_id)}"
                 )
             with col_button:
                 saved = state.is_favorite(uni_id)
