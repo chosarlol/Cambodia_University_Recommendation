@@ -48,18 +48,117 @@ def show_data_problem(missing_files: list):
 # 2. The pieces of the Home page, one function each
 # ---------------------------------------------------------------------------
 
-def render_hero():
-    """The big blue banner with the headline."""
-    st.markdown(
+# The photos behind the hero banner. They change every HERO_SECONDS seconds,
+# and the name of the university in the photo is shown bottom right as a
+# button that opens that university's page. To add or swap a photo, put it in
+# assets/hero/ and edit this list (university_id must match the app's ids).
+HERO_SLIDES = [
+    {
+        "image": "assets/hero/rule.jpg",
+        "university_id": "royal-university-of-law-and-economics",
+        "label": "Royal University of Law and Economics",
+    },
+    {
+        "image": "assets/hero/rupp.jpg",
+        "university_id": "royal-university-of-phnom-penh",
+        "label": "Royal University of Phnom Penh",
+    },
+    {
+        "image": "assets/hero/rufa.jpg",
+        "university_id": "royal-university-of-fine-arts",
+        "label": "Royal University of Fine Arts",
+    },
+]
+HERO_SECONDS = 10
+
+
+@st.cache_data
+def _image_as_data_url(path: str) -> str:
+    """
+    Read a photo and return it as a 'data:' URL.
+    st.markdown cannot load a local file by its path, so the picture is put
+    inside the page itself. Cached, so each file is read only once.
+    """
+    import base64
+    from pathlib import Path
+
+    file = Path(__file__).parent / path
+    if not file.exists():
+        return ""
+    kind = "png" if file.suffix.lower() == ".png" else "jpeg"
+    return f"data:image/{kind};base64," + base64.b64encode(file.read_bytes()).decode()
+
+
+def _hero_slideshow_css() -> str:
+    """
+    CSS that stacks the photos and fades from one to the next.
+
+    It is pure CSS (no JavaScript): every slide runs the same animation, each
+    one starting HERO_SECONDS later than the one before. The button with the
+    university's name runs the same animation, so the right name is always
+    shown with the right photo, and a hidden button cannot be clicked.
+    """
+    count = len(HERO_SLIDES)
+    cycle = HERO_SECONDS * count
+    show = 100 / count            # % of the cycle each slide is on screen
+    fade = 100 / cycle            # 1 second fade, as a % of the cycle
+
+    rules = [
+        f"""
+        @keyframes heroFade {{
+            0%   {{ opacity: 0; visibility: hidden; }}
+            {fade:.2f}% {{ opacity: 1; visibility: visible; }}
+            {show:.2f}% {{ opacity: 1; visibility: visible; }}
+            {show + fade:.2f}% {{ opacity: 0; visibility: hidden; }}
+            100% {{ opacity: 0; visibility: hidden; }}
+        }}
         """
-        <div class="hero">
-            <h1>Find the right university<br>in <span class="accent">Cambodia</span></h1>
-            <p>Compare public and private universities by major, province and
-            yearly budget - then save the ones you like.</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    ]
+    for i, slide in enumerate(HERO_SLIDES):
+        timing = f"heroFade {cycle}s linear {i * HERO_SECONDS}s infinite backwards"
+        rules.append(
+            f"""
+            .hero-slide-{i} {{
+                background-image: url("{_image_as_data_url(slide['image'])}");
+                animation: {timing};
+            }}
+            .st-key-hero_link_{i} {{ animation: {timing}; }}
+            """
+        )
+    return "<style>" + "".join(rules) + "</style>"
+
+
+def render_hero():
+    """The big banner with the headline, on top of changing university photos."""
+    with st.container(key="hero_box"):
+        slides = "".join(
+            f'<div class="hero-slide hero-slide-{i}"></div>'
+            for i in range(len(HERO_SLIDES))
+        )
+        html = _hero_slideshow_css() + f"""
+            <div class="hero hero-photo">
+                {slides}
+                <div class="hero-shade"></div>
+                <div class="hero-text">
+                    <h1>Find the right university<br>in <span class="accent">Cambodia</span></h1>
+                    <p>Compare public and private universities by major, province and
+                    yearly budget - then save the ones you like.</p>
+                </div>
+            </div>
+            """
+        # Markdown shows indented lines after a blank line as code, so remove
+        # the indentation and the empty lines before sending the HTML.
+        html = "\n".join(line.strip() for line in html.splitlines() if line.strip())
+        st.markdown(html, unsafe_allow_html=True)
+
+        # One button per photo, placed bottom right by CSS (see utils/style.py).
+        # A real Streamlit button keeps the visitor's favorites and answers,
+        # which a plain web link would lose by reloading the site.
+        for i, slide in enumerate(HERO_SLIDES):
+            with st.container(key=f"hero_link_{i}"):
+                if st.button(f"📍 {slide['label']}  →", key=f"hero_button_{i}"):
+                    state.open_university(slide["university_id"])
+                    st.switch_page("pages/detail.py")
 
 
 def render_search_box():
@@ -166,10 +265,9 @@ def render_key_numbers():
     col4.metric("Provinces covered", stats["provinces"])
 
     st.caption(
-        f"{stats['real_rows']} universities are real data from the Ministry of "
-        f"Education (MOEYS). {stats['sample_rows']} private universities are "
-        "sample (invented) data used only for testing - their names start with "
-        '"SAMPLE -".'
+        "University details come from the Ministry of Education (MOEYS). "
+        "Majors and fees were collected by our team. Private universities "
+        "have not been added yet."
     )
 
 

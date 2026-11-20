@@ -24,8 +24,8 @@ stats = data.get_summary_stats()
 style.section_title("What is in the database")
 col1, col2, col3 = st.columns(3)
 col1.metric("Universities", stats["total"])
-col2.metric("Real (public)", stats["real_rows"])
-col3.metric("Sample (private)", stats["sample_rows"])
+col2.metric("Public", stats["public"])
+col3.metric("Private", stats["private"])
 
 style.section_title("Where the data comes from")
 
@@ -42,24 +42,26 @@ st.markdown(
 """
 )
 
+progress = data.get_collection_progress()
 st.markdown(
-    """
-**Sample data - private universities and all tuition fees**
+    f"""
+**Collected by our team - majors and fees**
 
-The MOEYS data contains **no tuition fees and no private universities**.
-To be able to build and test the search, ranking and compare features, this
-website includes **invented** private universities and fees.
+The MOEYS data contains **no tuition fees** and only broad faculty names. For
+**{len(progress["with_majors"])} of the {progress["total"]} public universities**
+our team collected the real majors with their Khmer names, and for
+**{len(progress["with_fees"])}** of them the yearly fees. RUPP's list also has
+entrance exam subjects and places per shift. The files are in
+`data/major_detail/`. Fees given in riel are converted at 4,100 riel = 1 USD.
 
-- Every sample university name starts with **`SAMPLE -`**
-- Every fee shown on this site is **not real**
-- Real public universities always show **"Fee not published"**, because we
-  never guess a number
+- Public universities we have not collected yet show **"Fee not published"**,
+  because we never guess a number
+
+**Private universities - not added yet**
+
+The MOEYS data contains **no private universities**, and our team has not
+collected any yet, so the site currently lists public universities only.
 """
-)
-
-st.error(
-    "**Do not use the sample numbers for a real decision.** They exist only so "
-    "the interface can be demonstrated."
 )
 
 style.section_title("A newer file we chose not to use")

@@ -106,21 +106,43 @@ def open_university(university_id: str):
     We also put the id in the web address (?uni=...), so the page can be
     refreshed or the link shared and it still shows the same university.
     """
-    st.session_state["selected_university"] = university_id
-    st.query_params["uni"] = university_id
+    open_universities([university_id])
 
 
-def get_selected_university() -> str:
+def open_universities(university_ids: list):
     """
-    Which university should the Detail page show?
+    Remember several universities the visitor ticked on the Explore page.
+    The Detail page then shows each of them in its own tab.
+
+    In the web address they are joined with commas: ?uni=id-one,id-two
+    """
+    ids = [uid for uid in dict.fromkeys(university_ids) if uid]  # no duplicates
+    st.session_state["selected_universities"] = ids
+    st.session_state["selected_university"] = ids[0] if ids else None
+    st.query_params["uni"] = ",".join(ids)
+
+
+def get_selected_universities() -> list:
+    """
+    Which universities should the Detail page show? (a list, maybe empty)
 
     We look in session_state first, then in the web address, so a pasted
     link like .../university?uni=royal-university-of-phnom-penh still works.
     """
-    chosen = st.session_state.get("selected_university")
+    chosen = st.session_state.get("selected_universities")
     if chosen:
-        return chosen
-    return st.query_params.get("uni", "")
+        return list(chosen)
+    single = st.session_state.get("selected_university")
+    if single:
+        return [single]
+    from_link = st.query_params.get("uni", "")
+    return [uid.strip() for uid in from_link.split(",") if uid.strip()]
+
+
+def get_selected_university() -> str:
+    """The first university the Detail page should show, or ''."""
+    chosen = get_selected_universities()
+    return chosen[0] if chosen else ""
 
 
 # ---------------------------------------------------------------------------
