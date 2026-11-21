@@ -19,6 +19,9 @@ st.write(
     "Data Science*, Year 3 Data Science, Royal University of Phnom Penh."
 )
 
+# --- The counts -----------------------------------------------------------
+# Read from the data, never typed in by hand, so the page cannot go out of
+# date when a university is added or removed.
 stats = data.get_summary_stats()
 
 style.section_title("What is in the database")
@@ -27,6 +30,7 @@ col1.metric("Universities", stats["total"])
 col2.metric("Public", stats["public"])
 col3.metric("Private", stats["private"])
 
+# --- Layer 1: the official Ministry data ----------------------------------
 style.section_title("Where the data comes from")
 
 st.markdown(
@@ -42,6 +46,9 @@ st.markdown(
 """
 )
 
+# --- Layer 2: what our own team collected ---------------------------------
+# These numbers also come from the data layer, so this paragraph tells the
+# truth about how far the collection has got, even while it is still growing.
 progress = data.get_collection_progress()
 st.markdown(
     f"""

@@ -16,9 +16,13 @@ from utils.validation import ANY_PROVINCE, NOT_SURE
 
 st.title("📋 Your results")
 
+# Everything on this page comes from the answers the visitor gave in the form.
+# They were saved into st.session_state by utils/forms.py.
 profile = state.get_profile()
 
 # --- Nobody has filled in the form yet ------------------------------------
+# st.stop() below ends the script here, so the rest of the page never runs
+# and we do not have to indent everything that follows inside an "else".
 if not profile:
     st.info("You have not told us what you are looking for yet.")
     st.write("Fill in the short form and your ranked list will appear here.")
@@ -28,6 +32,7 @@ if not profile:
     st.stop()
 
 # --- Friendly summary of what the visitor asked for -----------------------
+# The name is optional in the form, so we greet by name only when we have one.
 greeting = f"Here are your matches, {profile['name']}." if profile.get("name") else "Here are your matches."
 st.subheader(greeting)
 st.markdown(f"You are looking for {validation.describe_profile(profile)}.")
@@ -39,6 +44,9 @@ with col_edit:
 
 st.divider()
 
+# This warning is deliberate and must stay until services/recommend.py exists.
+# A placeholder has to say on screen that it is a placeholder: showing invented
+# scores would be worse than showing none.
 st.warning(
     "**Ranking is not built yet.** This step only confirms that your answers "
     "were saved. The match score and the reasons for each result are the next "

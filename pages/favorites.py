@@ -13,16 +13,24 @@ from utils import state, style
 
 st.title("❤️ My favorites")
 
+# A list of university ids, in the order the visitor saved them.
 favorite_ids = state.get_favorites()
 
+# --- Nothing saved yet -----------------------------------------------------
+# An empty page is confusing, so we explain what the page is for and offer a
+# way to start, instead of showing a blank screen.
 if not favorite_ids:
     st.info("You have not saved any universities yet.")
     st.write("Use the ☆ Favorite button on the Explore page to save one.")
     if st.button("Go to Explore", type="primary"):
         st.switch_page("pages/browse.py")
+
+# --- One card per saved university ----------------------------------------
 else:
+    # Warn the visitor that this list is not permanent (no database yet).
     st.caption(f"{len(favorite_ids)} saved. They stay here while this tab is open.")
 
+    # We only kept the ids, so ask the data layer for the full rows.
     saved = data.get_universities_by_ids(favorite_ids)
 
     for _, university in saved.iterrows():
@@ -40,8 +48,11 @@ else:
                     f"{data.format_tuition_markdown(uni_id)}"
                 )
             with col_button:
+                # Every button needs its own key, or Streamlit treats the
+                # buttons on different cards as if they were the same button.
                 if st.button("Remove", key=f"unfav_{uni_id}", width="stretch"):
                     state.remove_favorite(uni_id)
+                    # Redraw at once so the removed card disappears.
                     st.rerun()
 
     if st.button("Clear all favorites"):

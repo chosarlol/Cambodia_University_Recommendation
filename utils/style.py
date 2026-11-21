@@ -212,8 +212,21 @@ footer {{ visibility: hidden; height: 0; }}
 """
 
 
+# ---------------------------------------------------------------------------
+# The four functions every page is allowed to call.
+#
+# They exist so no page ever writes raw HTML of its own: a page asks for "a
+# section title" and gets the same one everywhere. Change the look here and
+# the whole site changes together.
+#
+# unsafe_allow_html=True is needed because Streamlit escapes HTML by default.
+# It is safe here only because every string below is written by us - never
+# text typed in by a visitor.
+# ---------------------------------------------------------------------------
+
 def apply_style():
     """Add the custom CSS to the page. Call this once at the top of every page."""
+    # main() in app.py calls this once, before any page is drawn.
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
 
@@ -235,7 +248,13 @@ def card_header(icon: str, title: str, text: str):
 
 
 def site_footer():
-    """The same footer on every page."""
+    """
+    The same footer on every page.
+
+    It names our data sources and warns the visitor to confirm details with
+    the university. Keeping it in one function means the warning cannot go
+    missing from a page by accident - every page ends by calling this.
+    """
     st.markdown(
         """
         <div class="site-footer">

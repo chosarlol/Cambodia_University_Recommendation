@@ -40,13 +40,23 @@ def render_recommendation_form(form_key: str = "recommendation_form"):
     Draw the form, check the answers, and open the Results page on success.
 
     The fields are built from the data, never from a hardcoded list.
+
+    `form_key` must be different on each page. Two forms sharing one key are
+    treated by Streamlit as the same form, and they overwrite each other.
     """
+    # What the visitor chose last time, so the form opens already filled in.
     profile = state.get_profile()
 
+    # The choices come from the real data, so a new university or major
+    # appears in the dropdowns automatically. "Not sure yet" and "Any
+    # province" go first as the escape option for a visitor who cannot choose.
     major_options = [NOT_SURE] + data.list_majors()
     province_options = [ANY_PROVINCE] + data.list_provinces()
     type_options = ["Public", "Private", "Either"]
 
+    # Inside st.form the page does NOT re-run while the visitor types. Nothing
+    # happens until the submit button is pressed, so they can change several
+    # answers before anything is checked.
     with st.form(form_key):
         row1_left, row1_right = st.columns(2)
 
@@ -101,6 +111,8 @@ def render_recommendation_form(form_key: str = "recommendation_form"):
 
     # Everything below runs only after the button is pressed.
     if submitted:
+        # Collect the answers into one dictionary. This shape is the "profile"
+        # that every other page reads, so it must stay the same everywhere.
         new_profile = {
             "name": name.strip(),
             "major": major,
@@ -111,6 +123,8 @@ def render_recommendation_form(form_key: str = "recommendation_form"):
             "uni_type": uni_type,
         }
 
+        # The checks live in utils/validation.py and contain no Streamlit, so
+        # they can be reused by the backend later and tested on their own.
         errors = validation.validate_profile(new_profile)
 
         if errors:
@@ -118,6 +132,7 @@ def render_recommendation_form(form_key: str = "recommendation_form"):
             for error in errors:
                 st.error(error)
         else:
+            # Save first, then move: the Results page reads what we just saved.
             state.save_profile(new_profile)
             st.session_state["show_form_hint"] = False
             st.switch_page("pages/results.py")
